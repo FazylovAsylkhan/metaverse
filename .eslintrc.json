@@ -47,7 +47,9 @@
   "plugins": ["promise", "import"],
   "rules": {
     "no-unexpected-multiline": "error",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off"
   },
   "ignorePatterns": ["build", "webpack.config.js", "babel.config.js"]
 }
