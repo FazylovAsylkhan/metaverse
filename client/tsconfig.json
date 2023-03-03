@@ -29,6 +29,6 @@
       "@shared/*": ["shared/*"]
     }
   },
-  "include": ["src/**/*", "./declaration.d.ts"],
+  "include": ["src/**/*", "src/shared/config/declaration.d.ts"],
   "exclude": ["node_modules", "build"]
 }

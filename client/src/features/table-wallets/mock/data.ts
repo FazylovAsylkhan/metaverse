@@ -1,0 +1,86 @@
+export const dataWallets = [
+  {
+    id: 0,
+    username: 'Rojer Waters',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 1,
+    username: 'Hamish Gilmore',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 2,
+    username: 'Sam Crawford',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 3,
+    username: 'Lenny Barrett',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 4,
+    username: 'Cian Slater',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 5,
+    username: 'Abby Heath',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 6,
+    username: 'Faisal Hodge',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 7,
+    username: 'Oliver Ericson',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 8,
+    username: 'Abbas Falukner',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 9,
+    username: 'Ammar Colon',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 10,
+    username: 'Amaan Hickman',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 11,
+    username: 'Abbas Falukner',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 12,
+    username: 'Ammar Colon',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+  {
+    id: 13,
+    username: 'Amaan Hickman',
+    email: 'Charadeyouare@gmail.com',
+    address: '0x279D9f0c10fBB3D44fEf96',
+  },
+];
