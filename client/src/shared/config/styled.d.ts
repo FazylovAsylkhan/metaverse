@@ -19,8 +19,11 @@ declare module 'styled-components' {
       additional: string;
     };
     fonts: {
-      primary: string;
-      secondary: string;
+      family: {
+        secondary: string;
+        primary: string;
+      };
+      height: string;
     };
   }
 }

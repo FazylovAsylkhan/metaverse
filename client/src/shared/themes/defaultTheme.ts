@@ -18,7 +18,10 @@ export const defaultTheme: DefaultTheme = {
     additional: '#C7C7C7',
   },
   fonts: {
-    secondary: 'Roboto Mono, monospace',
-    primary: 'Bebas Neue, cursive',
+    family: {
+      secondary: 'Open Sans, sans-serif',
+      primary: 'Roboto, sans-serif',
+    },
+    height: '120%',
   },
 };

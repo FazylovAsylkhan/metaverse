@@ -1,8 +1,11 @@
 import React from 'react';
-import { StyledButton, IStyledButtonProps } from './button.style';
+import { StyledButton } from './button.style';
 
-export function Button(props: IStyledButtonProps): JSX.Element {
-  const { children, type } = props;
+interface IProps extends React.HTMLAttributes<HTMLButtonElement> {
+  type?: 'button' | 'reset' | 'submit';
+}
+export function Button(props: IProps): JSX.Element {
+  const { children, type = 'button' } = props;
 
   return <StyledButton type={type}>{children}</StyledButton>;
 }

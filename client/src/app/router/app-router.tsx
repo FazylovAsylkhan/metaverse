@@ -6,14 +6,14 @@ import {
   Route,
   RouterProvider,
 } from 'react-router-dom';
-import { AuthPage } from '@pages/auth';
+import { MainPage } from '@pages/main';
 
 export function AppRouter(): React.ReactElement | null {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/auth" element={<AuthPage />} />
-        <Route path="*" element={<Navigate to="auth" replace />} />
+        <Route path="/main" element={<MainPage />} />
+        <Route path="*" element={<Navigate to="main" replace />} />
       </>
     )
   );

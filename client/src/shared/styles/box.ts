@@ -8,6 +8,7 @@ interface IProps {
 }
 
 export const Box = styled.div<IProps>`
+  width: 100%;
   display: flex;
   flex-direction: ${(props) => props.direction};
   padding: ${(props) => props.padding ?? 0};

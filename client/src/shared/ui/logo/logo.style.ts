@@ -11,6 +11,6 @@ export const StyledLogo = styled.div`
   border: 1px dashed #c7c7c7;
   font-weight: 400;
   font-size: 18px;
-  line-height: 120%;
-  font-family: ${(props) => props.theme.fonts.primary};
+  line-height: ${(props) => props.theme.fonts.height};
+  font-family: ${(props) => props.theme.fonts.family.primary};
 `;
