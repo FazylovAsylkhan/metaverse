@@ -1,25 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Input, Label } from '@shared/ui';
-import { StyledField } from './field-text.style';
+import { Flex } from '@shared/styles';
 
 interface IProps {
   name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export function FieldText(props: IProps): JSX.Element {
-  const { name } = props;
-  const [inputNameValue, setInputNameValue] = useState('');
+  const { name, value, onChange } = props;
 
   return (
-    <StyledField>
+    <Flex flexDirection="column" gap="8px">
       <Label id={name}>{name}</Label>
       <Input
-        value={inputNameValue}
+        value={value}
         id={name}
         name={name}
-        onChange={(e) => setInputNameValue(e.target.value)}
+        onChange={onChange}
         placeholder="We will display your email in participation list"
       />
-    </StyledField>
+    </Flex>
   );
 }

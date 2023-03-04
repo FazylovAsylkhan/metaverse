@@ -1,4 +1,4 @@
-export const dataWallets = [
+export const participators = [
   {
     id: 0,
     username: 'Rojer Waters',

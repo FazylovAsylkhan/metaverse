@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+interface IProps {
+  margin?: string;
+  padding?: string;
+}
+
+export const StyledButton = styled.button<IProps>`
+  margin: ${(props) => props.margin};
+  padding: ${(props) => props.padding ?? '10px 24px'};
   width: fit-content;
-  padding: 10px 24px;
   border-radius: ${(props) => props.theme.common.borderRadius};
   background-color: ${(props) => props.theme.palette.primary.default};
   font-family: ${(props) => props.theme.fonts.family.primary};
