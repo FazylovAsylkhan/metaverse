@@ -1,1 +1,0 @@
-export { dataWallets } from './data';

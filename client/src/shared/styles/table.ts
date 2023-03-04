@@ -13,16 +13,17 @@ interface ICaptionProps {
 
 export const Caption = styled.caption<ICaptionProps>`
   display: flex;
-  margin: ${(props) => props.margin};
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: ${(props) => props.theme.fonts.height};
-  font-family: ${(props) => props.theme.fonts.family.primary};
+  margin: ${(props) => props.margin ?? '0 0 35px 0'};
 `;
 
-export const Thead = styled.thead`
-  padding-right: 30px;
+interface THeadProps {
+  margin?: string;
+  padding?: string;
+}
+
+export const Thead = styled.thead<THeadProps>`
+  margin: ${(props) => props.margin ?? '0 0px 16px 0'};
+  padding: ${(props) => props.padding ?? '0 30px 0 0'};
   & > tr {
     &:first-child {
       border: none;
@@ -32,7 +33,7 @@ export const Thead = styled.thead`
 export const Tbody = styled.tbody`
   overflow-y: auto;
   padding-right: 30px;
-  max-height: 564px;
+  max-height: 550px;
   z-index: 100;
 `;
 
@@ -52,17 +53,16 @@ export const Tr = styled.tr<IRowProps>`
 interface IColumnProps {
   start: string;
   end: string;
+  padding?: string;
 }
 
 export const Td = styled.td<IColumnProps>`
   display: flex;
   grid-column: ${(props) => props.start} / ${(props) => props.end} span;
-  padding: 16px 0;
+  padding: ${(props) => props.padding ?? '16px 0'};
 `;
 
 export const Th = styled.th<IColumnProps>`
   display: flex;
   grid-column: ${(props) => props.start} / ${(props) => props.end} span;
-  text-transform: uppercase;
-  padding-bottom: 16px;
 `;
