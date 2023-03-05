@@ -1,4 +1,2 @@
-export { Button } from './button';
 export { Logo } from './logo';
-export { Input } from './input';
-export { Label } from './label';
+export { ConfirmModal } from './confirm';

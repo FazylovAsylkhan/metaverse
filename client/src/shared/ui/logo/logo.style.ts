@@ -9,8 +9,4 @@ export const StyledLogo = styled.div`
   height: 44px;
   background: #5a5a5a;
   border: 1px dashed #c7c7c7;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: ${(props) => props.theme.fonts.height};
-  font-family: ${(props) => props.theme.fonts.family.primary};
 `;

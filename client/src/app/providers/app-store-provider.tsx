@@ -2,10 +2,15 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { user } from '@entities/user';
-import { wallet } from '@entities/wallet';
+import { participationListingApi } from '@shared/api';
 
 const store = configureStore({
-  reducer: { user, wallet },
+  reducer: {
+    user,
+    [participationListingApi.reducerPath]: participationListingApi.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(participationListingApi.middleware),
 });
 
 interface IProps {
