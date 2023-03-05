@@ -20,9 +20,9 @@
         "airbnb/hooks",
         "plugin:react-hooks/recommended",
         "plugin:react/recommended",
-        "plugin:import/typescript",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:import/typescript",
         "prettier"
       ],
       "parser": "@typescript-eslint/parser",
@@ -47,7 +47,9 @@
   "plugins": ["promise", "import"],
   "rules": {
     "no-unexpected-multiline": "error",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/prop-types": "off",
+    "react/require-default-props": "off"
   },
   "ignorePatterns": ["build", "webpack.config.js", "babel.config.js"]
 }
