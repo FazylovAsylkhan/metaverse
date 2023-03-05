@@ -1,15 +1,13 @@
 import React, { useLayoutEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { useEthers } from '@usedapp/core';
-import { Header } from '@shared/styles';
-import { Button, Logo } from '@shared/ui';
-import { connected, disconnected, selectWallet } from '@entities/wallet';
-import { useAppSelector } from '@shared/hooks';
+import { Header, Button, H2 } from '@shared/styles';
+import { Logo } from '@shared/ui';
+import { connected, disconnected } from '@entities/user';
 
 export function ConnectionWallet(): JSX.Element {
   const dispatch = useDispatch();
-  const { account, deactivate, activateBrowserWallet } = useEthers();
-  const wallet = useAppSelector(selectWallet);
+  const { account, activateBrowserWallet } = useEthers();
 
   useLayoutEffect(() => {
     if (account !== undefined) {
@@ -26,8 +24,10 @@ export function ConnectionWallet(): JSX.Element {
       padding="14px 70px"
       display="flex">
       <Logo>Logo</Logo>
-      {account !== undefined && wallet !== undefined ? (
-        <Button onClick={() => deactivate()}>{account}</Button>
+      {account !== undefined ? (
+        <H2 color="primary" fontSize="18px" maxWidth="145px">
+          {account}
+        </H2>
       ) : (
         <Button onClick={() => activateBrowserWallet()}>Connect</Button>
       )}

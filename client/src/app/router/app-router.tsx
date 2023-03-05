@@ -7,13 +7,15 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { MainPage } from '@pages/main';
+import { ParticipatorPage } from '@pages/participator';
 
 export function AppRouter(): React.ReactElement | null {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
         <Route path="/main" element={<MainPage />} />
-        <Route path="*" element={<Navigate to="main" replace />} />
+        <Route path="/id/:id" element={<ParticipatorPage />} />
+        <Route path="*" element={<Navigate to="/main" replace />} />
       </>
     )
   );
