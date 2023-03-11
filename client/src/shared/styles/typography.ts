@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled, { DefaultTheme } from 'styled-components';
 
 enum Color {
@@ -62,24 +61,21 @@ export const P = styled.p<IProps>`
   color: ${(props) => setColor(props)};
   font-family: ${(props) => setFontFamily(props)};
   font-weight: 400;
-  font-size: ${(props) => props.fontSize ?? '16px'};
+  font-size: ${(props) => props.fontSize ?? '13px'};
   line-height: ${(props) => props.theme.fonts.height};
   text-align: ${(props) => props.textAlign};
 `;
 
 export const H1 = styled.h1<IProps>`
-  overflow: ${(props) => props.overflow ?? 'hidden'};
-  white-space: ${(props) => props.whiteSpace ?? 'nowrap'};
-  text-overflow: ${(props) => props.textOverflow ?? 'ellipsis'};
-  max-width: ${(props) => props.maxWidth};
   text-transform: ${(props) => props.textTransform ?? 'uppercase'};
   margin: ${(props) => props.margin};
   color: ${(props) => setColor(props)};
   font-family: ${(props) => setFontFamily(props)};
   font-weight: 700;
-  font-size: ${(props) => props.fontSize ?? '48px'};
+  font-size: ${(props) => props.fontSize ?? '34px'};
   line-height: ${(props) => props.theme.fonts.height};
 `;
+
 export const H2 = styled.h2<IProps>`
   overflow: ${(props) => props.overflow ?? 'hidden'};
   white-space: ${(props) => props.whiteSpace ?? 'nowrap'};
@@ -99,7 +95,7 @@ export const H3 = styled.h3<IProps>`
   text-transform: ${(props) => props.textTransform ?? 'uppercase'};
   font-weight: 700;
   color: ${(props) => setColor(props)};
-  font-size: ${(props) => props.fontSize ?? '32px'};
+  font-size: ${(props) => props.fontSize ?? '25px'};
   line-height: ${(props) => props.theme.fonts.height};
 `;
 
@@ -108,12 +104,13 @@ export const H4 = styled.h4<IProps>`
   font-weight: 700;
   color: ${(props) => setColor(props)};
   font-family: ${(props) => setFontFamily(props)};
-  font-size: ${(props) => props.fontSize ?? '24px'};
+  font-size: ${(props) => props.fontSize ?? '18px'};
   line-height: ${(props) => props.theme.fonts.height};
 `;
 
 export const H5 = styled.h5<IProps>`
-  font-weight: 700;
+  text-transform: ${(props) => props.textTransform ?? 'uppercase'};
+  font-weight: ${(props) => props.fontWeight ?? 700};
   color: ${(props) => setColor(props)};
   font-family: ${(props) => setFontFamily(props)};
   font-size: ${(props) => props.fontSize ?? '14px'};
@@ -124,13 +121,13 @@ export const H5 = styled.h5<IProps>`
   max-width: ${(props) => props.maxWidth};
 `;
 
-export const StyledLink = styled(Link)<IProps>`
+export const Span = styled.span<IProps>`
+  max-width: ${(props) => props.maxWidth};
   display: ${(props) => props.display ?? 'inline'};
   padding: ${(props) => props.padding ?? '0'};
   overflow: ${(props) => props.overflow ?? 'hidden'};
   white-space: ${(props) => props.whiteSpace ?? 'nowrap'};
   text-overflow: ${(props) => props.textOverflow ?? 'ellipsis'};
-  max-width: ${(props) => props.maxWidth};
   font-weight: ${(props) => props.fontWeight ?? '400'};
   color: ${(props) => setColor(props)};
   font-family: ${(props) => setFontFamily(props)};
@@ -138,4 +135,6 @@ export const StyledLink = styled(Link)<IProps>`
   line-height: ${(props) => props.theme.fonts.height};
 `;
 
-export const Label = styled.label``;
+export const Label = styled.label`
+  width: 100%;
+`;

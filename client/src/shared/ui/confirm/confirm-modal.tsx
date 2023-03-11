@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, DarkBackground, Flex, Modal } from '@shared/styles';
+import { Button, DarkBackground, Div, Flex, Modal } from '@shared/styles';
 
 interface IProps {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ export function ConfirmModal(props: IProps): JSX.Element {
   const { children, buttonText, onClose } = props;
 
   return (
-    <>
+    <Div position="absolute" zIndex="1000">
       <DarkBackground />
       <Modal>
         <Flex flexDirection="column" gap="95px" alignItems="center">
@@ -21,6 +21,6 @@ export function ConfirmModal(props: IProps): JSX.Element {
           <Button onClick={onClose}>{buttonText}</Button>
         </Flex>
       </Modal>
-    </>
+    </Div>
   );
 }

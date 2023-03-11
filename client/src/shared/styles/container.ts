@@ -4,6 +4,6 @@ export const Container = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 30px;
+  grid-column-gap: 24px;
   max-width: 1440px;
 `;

@@ -1,17 +1,20 @@
 import React from 'react';
-import { AppDappProvider, AppThemeProvider } from './providers';
-import { AppStore } from './providers/app-store-provider';
-import { AppRouter } from './router';
+import {
+  AppDappProvider,
+  AppThemeProvider,
+  AppStoreProvider,
+  AppRouterProvider,
+} from './providers';
 import { GlobalStyle } from './styles';
 
 export function App(): JSX.Element {
   return (
     <AppThemeProvider>
       <AppDappProvider>
-        <AppStore>
+        <AppStoreProvider>
           <GlobalStyle />
-          <AppRouter />
-        </AppStore>
+          <AppRouterProvider />
+        </AppStoreProvider>
       </AppDappProvider>
     </AppThemeProvider>
   );
