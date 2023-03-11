@@ -15,7 +15,7 @@ export const Button = styled.button<IProps>`
   border-radius: ${(props) => props.theme.common.borderRadius};
   background-color: ${(props) => props.theme.palette.primary.default};
   font-family: ${(props) => props.theme.fonts.family.primary};
-  font-size: 18px;
+  font-size: 14px;
   color: ${(props) => props.theme.palette.secondary.default};
   line-height: ${(props) => props.theme.fonts.height};
   text-transform: uppercase;

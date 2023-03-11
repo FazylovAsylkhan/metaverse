@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@babel/preset-typescript": "^7.18.6",
+    "@svgr/webpack": "^6.5.1",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@types/styled-components": "^5.1.26",
@@ -50,6 +51,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.1",
     "@reduxjs/toolkit": "^1.9.3",
     "@usedapp/core": "^1.2.7",
     "ethers": "^5.7.2",

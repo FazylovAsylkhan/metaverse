@@ -6,6 +6,7 @@ interface IProps {
   gridSize?: string;
   position?: string;
   display?: string;
+  width?: string;
 }
 
 export const Table = styled.table<IProps>`
@@ -33,11 +34,12 @@ export const Thead = styled.thead<IProps>`
 export const Tbody = styled.tbody<IProps>`
   overflow-y: auto;
   padding-right: 30px;
-  max-height: 550px;
+  max-height: 548px;
   z-index: 100;
 `;
 
 export const Tr = styled.tr<IProps>`
+  width: ${(props) => props.width};
   display: ${(props) => props.display ?? 'grid'};
   position: ${(props) => props.position ?? 'static'};
   grid-template-columns: ${(props) => props.gridSize ?? '0'};
@@ -57,6 +59,9 @@ export const Td = styled.td<IColumnProps>`
   display: flex;
   grid-column: ${(props) => props.start} / ${(props) => props.end} span;
   padding: ${(props) => props.padding ?? '16px 0'};
+  &:last-child {
+    padding-bottom: 0;
+  }
 `;
 
 export const Th = styled.th<IColumnProps>`
